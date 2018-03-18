@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode 4
+        versionName '1.1.2'
+    }
+
+    publishNonDefault true
+    buildToolsVersion '26.0.2'
+    buildTypes{
+        debug{ }
+        release{ }
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:${project.ext.supportLibraryVersion}"
+    compile 'com.myscript:iink:1.1.2'
+}
